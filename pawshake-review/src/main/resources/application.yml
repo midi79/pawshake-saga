@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: pawshake-review
+  datasource:
+    url: jdbc:mariadb://${DOCKER_HOST_IP:localhost}/eventuate
+    username: mysqluser
+    password: mysqlpw
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  port: 8085
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+kafka:
+  bootstrap:
+    address: http://localhost:9092
+  topic: pawshake
+  consumer:
+    groupId : pawshake-review
+  event:
+    location : com.anderson.pawshake.kafka.event
