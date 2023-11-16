@@ -3,6 +3,10 @@
 
 Reference web site for modeling
 - https://www.pawshake.co.nz/
+
+Modeling
+<img width="1585" alt="스크린샷 2023-11-08 오후 11 30 30" src="https://github.com/midi79/pawshake-saga/assets/19512435/935573e7-be9c-4232-be91-974509cb108d">
+- https://labs.msaez.io/#/storming/pawshake
  
 Prerequisite
 - Install and run Docker
