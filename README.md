@@ -26,6 +26,7 @@ How to run
 3. run application : User, Reservation, Sitter, Payment
 4. Orchestration saga Test : POST http://localhost:8081/api/v1/user/pay
 5. Choreography saga Test : POST http://localhost:8081/api/v1/user/choreography/pay
+6. If the Saga process succeeds, Payment status and Reservation status should match, indicating a successful and synchronized transaction.
 
 
 Reference sources
