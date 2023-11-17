@@ -28,6 +28,46 @@ How to run
 5. Choreography saga Test : POST http://localhost:8081/api/v1/user/choreography/pay
 6. If the Saga process succeeds, Payment status and Reservation status should match, indicating a successful and synchronized transaction.
 
+How to create sample data
+- User : POST http://localhost:8081/api/v1/user/create
+```
+{
+    "name":"Alice",
+    "status":"EMPTY",
+    "address": "Auckland, New Zealand",
+    "email":"alice99@gmail.com",
+    "phone":"027-999-0000"
+}
+```
+- Sitter : POST http://localhost:8083/api/v1/sitter/create
+```
+{
+    "name":"Anderson",
+    "status":"EMPTY",
+    "address":"Great North Road, Waterview, Auckland, New Zealand",
+    "email":"anderson9990@gmail.com",
+    "phone":"027-888-0000",
+    "serviceType":"Board",
+    "price":50,
+    "availableTime":"Daytime",
+    "introduce":"I have experience about 5 years for pet sitting!",
+    "experience":5,
+    "language":"Korea,English"
+}
+```
+- Pet : POST http://localhost:8082/api/v1/pet/create
+```
+{
+    "name":"Black",
+    "userId":1,
+    "birthYear":"2020",
+    "breed":"poodle",
+    "size":"small",
+    "gender":"female",
+    "characteristic":"Kind,Shy,Cute"
+}
+```
+
 
 Reference sources
 - https://github.com/msa-school/lab-shop-eventuate-orchestration/tree/main
